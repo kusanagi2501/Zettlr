@@ -20,7 +20,7 @@
     "release:this": "electron-builder",
     "release:mac": "electron-builder --mac --publish \"never\"",
     "release:win": "electron-builder --win --publish \"never\"",
-    "release:linux": "electron-builder --linux --publish \"never\"",
+    "release:linux": "USE_SYSTEM_FPM='true' electron-builder --linux --arm64 --publish \"never\"",
     "less": "gulp less",
     "handlebars": "gulp handlebars",
     "lang:refresh": "node scripts/refresh-language.js",
@@ -93,12 +93,10 @@
         {
           "target": "AppImage",
           "arch": [
-            "x64",
-            "ia32"
+            "arm64"
           ]
         },
-        "deb",
-        "rpm"
+        "deb"
       ],
       "artifactName": "Zettlr-${version}-${arch}.${ext}",
       "synopsis": "Markdown editor",

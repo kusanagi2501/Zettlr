@@ -8,7 +8,7 @@ const log = require('./console-colour.js')
 const path = require('path')
 
 // Define the target list for Linux and Windows builds
-const linuxTargets = [{ target: 'AppImage', arch: [ 'x64', 'ia32' ] }, 'deb', 'rpm' ]
+const linuxTargets = [{ target: 'AppImage', arch: [ 'arm64' ] }, 'deb', 'rpm' ]
 const win32Targets = [{ target: 'nsis', arch: [ 'x64', 'ia32' ] }]
 
 /**
